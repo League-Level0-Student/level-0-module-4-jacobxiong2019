@@ -1,4 +1,5 @@
 package _11_own_adventure;
+
 //int choice = JOptionPane.showOptionDialog(null, "What will you do?", "Stranded", 0, JOptionPane.INFORMATION_MESSAGE, null,
 //new String[] { "", "", ""}, null);
 import javax.swing.JOptionPane;
@@ -93,7 +94,16 @@ public class ownAdventure {
 						}
 					}
 				}
-				//-
+				int choice4 = JOptionPane.showOptionDialog(null, "What will you do?", "Stranded", 0, JOptionPane.INFORMATION_MESSAGE, null,
+						new String[] { "Check the building", "Continue down the shore"},null);
+				if(choice4 == 0)
+				{
+					checkBuilding();
+				}
+				if (choice4 == 1)
+				{
+					boat();
+				}
 			}
 		
 		
@@ -116,9 +126,16 @@ public class ownAdventure {
 	public static void exploreForestSurviveAttack() {
 	JOptionPane.showMessageDialog(null, "You explore farther into the forest but find a several bears eating berries. You have no choice but to go back to the stream, but the bears saw you"
 			+ "\n and attacked you. You were healthy enough to escape and go to back to the stream to wash your wounds.");
-	}public static void exploreForestNotSurviveAttack() {
+	}
+	public static void exploreForestNotSurviveAttack() {
 		JOptionPane.showMessageDialog(null, "You explore farther into the forest but find a several bears eating berries. You have no choice but to go back to the stream, but the bears saw you"
 			+ "\n and attacked you. You weren't healthy enough to survive the attack and lay there with bears surrounding you.");
 	}
+	public static void checkBuilding() {
+		JOptionPane.showMessageDialog(null, "You check the building and find furniture with people! You ask them where you are. They don't know either and they said they survived on the island"
+				+ "\n and never knew where they were. You asked them where you can go out and they say there is a boat somewhere along the shore!");
+	}
+	public static void boat() {
+		JOptionPane.showMessageDialog(null, "You saw that there was a boat and using the boat you were able to navigate around the sea! It looks like your adventure on the island is coming to an end!");
+	}
 }
-
